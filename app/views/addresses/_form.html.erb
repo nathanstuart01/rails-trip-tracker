@@ -1,0 +1,29 @@
+<%= form_for [@location, @address] do |f| %>
+  <div class='field'>
+    <div class='card'>
+      <%= f.label :street %>
+      <%= f.text_field :street %>
+    </div>
+    <br />
+
+    <div class='card'>
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+    </div>
+    <br />
+
+    <div class='card'>
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+    </div>
+    <br />
+
+    <div class='card'>
+      <%= f.label :zip %>
+      <%= f.text_field :zip %>
+    </div>
+  </div>
+  <br />
+
+  <%= f.submit 'Submit', class: 'btn orange white-text'%>
+<% end %>

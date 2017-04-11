@@ -1,0 +1,15 @@
+<% @locations.each do |location| %>
+  <h4><%= location.destination %></h4>
+
+  <h5><%= location.travel_method %></h5>
+
+  <%= link_to 'Show', trip_location_path(@trip, location), class: 'btn orange white-text' %>
+
+  <%= link_to 'Address', location_addresses_path(location), class: 'btn orange white-text' %>
+<% end %>
+
+<br />
+<br />
+<%= link_to 'New Trip Location', new_trip_location_path(@trip, @location), class: 'btn orange white-text' %>
+
+<%= link_to 'Home', trips_path, class: 'btn orange white-text' %>

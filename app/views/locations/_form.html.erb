@@ -1,0 +1,17 @@
+<%= form_for [@trip, @location] do |f| %>
+  <div class='field'>
+    <div class='card'>
+      <%= f.label :destination %>
+      <%= f.text_field :destination %>
+    </div>
+    <br />
+
+    <div class='card'>
+      <%= f.label :travel_method %>
+      <%= f.select :travel_method, (@travel_methods), {}, class: 'browser-default' %>
+    </div>
+    <br />
+  </div>
+  
+  <%= f.submit 'Submit', class: 'btn orange white-text'%>
+<% end %>

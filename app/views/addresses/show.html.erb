@@ -1,0 +1,25 @@
+<ul>
+  <h3>
+    <li>Street: <%= @address.street %> </li>
+  </h3>
+  <h3>
+    <li>City: <%= @address.city %> </li>
+  </h3>
+  <h3>
+    <li>State: <%= @address.state %> </li>
+  </h3>
+  <h3>
+    <li>Zip: <%= @address.zip %> </li>
+  </h3>
+    <li>
+      <%= link_to 'Edit', edit_location_address_path(@location, @address), class: 'btn orange white-text' %>
+    </li>
+      <br />
+    <li>
+      <%= link_to 'Delete', location_address_path(@location, @address), method: :delete, data: {confirm: 'Really Delete?'},
+          class: 'btn orange white-text' %>
+    </li>
+</ul>
+
+<br />
+<%= link_to 'Back', location_addresses_path(@location), class: 'btn orange white-text' %>

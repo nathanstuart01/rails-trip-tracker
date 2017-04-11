@@ -1,0 +1,27 @@
+<h1>Send A Newsletter</h1>
+<hr />
+
+
+<%= form_tag newsletter_index_path do %>
+  <div>
+    <%= label_tag "Subject" %>
+    <br />
+    <%= text_area_tag "subject", nil, placeholder: 'Subject', cols: '20',
+    rows: '5', required: true %>
+  </div>
+
+  <div>
+      <%= label_tag "Emails (*comma separated)" %>
+      <br />
+      <%= text_area_tag "emails", nil, placeholder: 'test@test.com,
+      contact@dpl.com', required: true, cols: '20', rows: '5' %>
+  </div>
+  <hr />
+  <div>
+    <%= label_tag "Newsletter Type" %>
+    <br />
+      <%= select_tag "newsletter", options_for_select(['monthly']) %>
+    </div>
+    <hr />
+    <%= submit_tag "Send" %>
+  <% end %>

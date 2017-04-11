@@ -1,0 +1,15 @@
+  <% @trips.each do |trip| %>
+  <div class='col s12 m3'>
+    <h5><%= trip.name %></h5>
+    <br />
+      <%= link_to 'Show', trip_path(trip), 
+      class: 'btn orange white-text' %>
+
+      <%= link_to 'Locations', trip_locations_path(trip), 
+      class: 'btn orange white-text' %>
+  <% end %>
+</div>
+
+<br />
+<%= link_to 'New Trip', new_trip_path, 
+class: 'btn orange white-text' %>

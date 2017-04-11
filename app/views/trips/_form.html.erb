@@ -1,0 +1,11 @@
+<%= form_for @trip do |f| %>
+  <div class='field'>
+    <div class='card'>
+      <h3><%= f.label :name %></h3>
+      <h5><%= f.text_field :name %></h5>
+    </div>
+    <br />
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn orange white-text'%>
+<% end %>

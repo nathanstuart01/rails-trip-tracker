@@ -1,0 +1,16 @@
+<ul>
+  <h3>
+    <li>Name: <%= @location.destination %> </li>
+  </h3>
+    <li>
+      <%= link_to 'Edit', edit_trip_location_path(@trip, @location), class: 'btn orange white-text' %>
+    </li>
+      <br />
+    <li>
+        <%= link_to 'Delete', trip_location_path(@trip, @location), method: :delete, data: {confirm: 'Really Delete?'},
+            class: 'btn orange white-text' %>
+    </li>
+</ul>
+
+<br />
+<%= link_to 'Back', trip_locations_path(@trip), class: 'btn orange white-text' %>
